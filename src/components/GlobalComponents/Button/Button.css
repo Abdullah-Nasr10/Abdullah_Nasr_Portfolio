@@ -1,0 +1,44 @@
+.customBtn {
+    display: inline-block;
+    /* margin-top: 1rem; */
+    color: var(--title-color);
+    border: 1px solid var(--main-color-1);
+    padding: 1rem 4.5rem 1rem 2rem;
+    border-radius: 2rem;
+    font-size: var(--large-font-size);
+    font-weight: var(--weight-600);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.customBtn:hover {
+    color: var(--white-color);
+}
+
+.customBtn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--main-color-1);
+    border-radius: inherit;
+    z-index: -10;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.customBtn:hover::before {
+    transform: translateX(-1px);
+}
+
+.customBtn .btnIcon {
+    position: absolute;
+    width: auto;
+    inset: -1px -1px -1px auto;
+    background-color: var(--main-color-1);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    color: var(--white-color);
+    font-size: 1.5rem;
+}
