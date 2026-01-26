@@ -1,0 +1,17 @@
+.homePageContainer #home,
+#about,
+#projects,
+#contact,
+#footer {
+    padding: 8rem 0;
+}
+
+#home {
+    height: 100svh;
+    background: linear-gradient(to bottom left, transparent 50%, var(--main-color-light) 50%);
+}
+
+#projects,
+#footer {
+    background-color: var(--main-color-light);
+}

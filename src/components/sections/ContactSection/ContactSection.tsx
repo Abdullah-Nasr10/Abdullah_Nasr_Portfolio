@@ -1,8 +1,6 @@
-import './ContactSection.css'
+import "./ContactSection.css";
 function ContactSection() {
-  return (
-    <div>ContactSection</div>
-  )
+  return <div className="container">ContactSection</div>;
 }
 
-export default ContactSection
+export default ContactSection;

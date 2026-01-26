@@ -1,8 +1,6 @@
-import './ProjectsSection.css'
+import "./ProjectsSection.css";
 function ProjectsSection() {
-  return (
-    <div>ProjectsSection</div>
-  )
+  return <div className="container">ProjectsSection</div>;
 }
 
-export default ProjectsSection
+export default ProjectsSection;

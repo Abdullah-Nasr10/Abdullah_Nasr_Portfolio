@@ -2,10 +2,11 @@ import "./Button.css";
 interface ButtonProps {
   btnText: string;
   btnIcon?: React.ElementType;
+  href?: string;
 }
-function Button({ btnText, btnIcon: BtnIcon }: ButtonProps) {
+function Button({ btnText, btnIcon: BtnIcon, href }: ButtonProps) {
   return (
-    <button className="customBtn">
+    <a href={href} className="customBtn">
       <span className="btnText">{btnText}</span>
       {/* <i className="btnIcon center fa-regular fa-paper-plane"></i> */}
       {BtnIcon && (
@@ -13,7 +14,7 @@ function Button({ btnText, btnIcon: BtnIcon }: ButtonProps) {
           <BtnIcon />
         </div>
       )}
-    </button>
+    </a>
   );
 }
 

@@ -1,8 +1,6 @@
-import './AboutSection.css'
+import "./AboutSection.css";
 function AboutSection() {
-  return (
-    <div>AboutSection</div>
-  )
+  return <div className="container">AboutSection</div>;
 }
 
-export default AboutSection
+export default AboutSection;

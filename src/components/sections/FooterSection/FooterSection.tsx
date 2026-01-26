@@ -1,8 +1,6 @@
-import './FooterSection.css'
+import "./FooterSection.css";
 function FooterSection() {
-  return (
-    <div>FooterSection</div>
-  )
+  return <div className="container">FooterSection</div>;
 }
 
-export default FooterSection
+export default FooterSection;

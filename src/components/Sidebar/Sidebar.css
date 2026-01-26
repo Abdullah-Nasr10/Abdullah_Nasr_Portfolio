@@ -1,23 +1,128 @@
 .sidebar {
-    width: 50px;
+    width: 5rem;
     background-color: var(--container-color);
     color: var(--title-color);
     transition: width 0.3s ease;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
 .sidebar.open {
-    width: 300px;
+    width: 30rem;
+}
+
+/* =================== Profile Section =================== */
+.sidebar .imgTitle {
+    padding-top: 6rem;
+}
+
+.profileImg {
+    width: 4rem;
+    height: 4rem;
+    box-shadow: 0 0 0.5rem var(--main-color-1);
+}
+
+.sidebar.open .profileImg {
+    width: 8rem;
+    height: 8rem;
+}
+
+.profileImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .toggle-btn {
-    border: 1px solid var(--border-color);
+    border: 0.1rem solid var(--border-color);
     color: var(--title-color);
     cursor: pointer;
     position: absolute;
-    right: -10px;
-    top: 15px;
+    right: -1rem;
+    top: 1.5rem;
     font-size: 1.5rem;
     background-color: var(--container-color);
-    width: 30px;
-    aspect-ratio: 1/1;
+    width: 3rem;
+    height: 3rem;
+}
+
+/* =================== Navigation Links =================== */
+.navigatePages {
+    background-color: var(--body-color);
+    color: var(--title-color);
+    transition: all 0.3s ease;
+    font-size: 2rem;
+    border-radius: 1rem;
+}
+
+.navigatePages:hover {
+    background-color: var(--main-color-1);
+    color: var(--white-color);
+}
+
+.sidebar.open .navigatePages {
+    justify-content: flex-start !important;
+    padding-left: 2rem !important;
+}
+
+.pageName {
+    font-size: 1.6rem;
+    white-space: nowrap;
+}
+
+/* =================== Toggle Theme Button =================== */
+.toggle-theme {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--body-color);
+    color: var(--title-color);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-theme:hover {
+    background-color: var(--main-color-1);
+    color: var(--white-color);
+}
+
+
+
+/* =============== Mobile ================ */
+@media (max-width: 768px) {
+    .sidebar:not(.open) * {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .sidebar.open * {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .sidebar {
+        width: 0;
+        transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        width: 30rem;
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+    }
+
+    .mobile-toggle {
+        position: fixed;
+        top: 1.5rem;
+        left: 1.5rem;
+        z-index: 1100;
+        width: 4rem;
+        height: 4rem;
+        font-size: 2rem;
+        background: var(--main-color-1);
+        color: var(--white-color);
+        border: none;
+    }
 }
