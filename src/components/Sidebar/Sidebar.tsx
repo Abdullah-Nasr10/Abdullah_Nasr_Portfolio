@@ -91,7 +91,7 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
             {/* --------------Contact me------------------- */}
             <li>
               <a
-                href="#contactMe"
+                href="#contact"
                 className="navigatePages center gap-3 p-3 mx-1"
                 aria-label="Navigate to Contact me section"
               >
