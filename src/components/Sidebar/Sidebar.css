@@ -45,29 +45,6 @@
     height: 3rem;
 }
 
-/* =================== Navigation Links =================== */
-.navigatePages {
-    background-color: var(--body-color);
-    color: var(--title-color);
-    transition: all 0.3s ease;
-    font-size: 2rem;
-    border-radius: 1rem;
-}
-
-.navigatePages:hover {
-    background-color: var(--main-color-1);
-    color: var(--white-color);
-}
-
-.sidebar.open .navigatePages {
-    justify-content: flex-start !important;
-    padding-left: 2rem !important;
-}
-
-.pageName {
-    font-size: 1.6rem;
-    white-space: nowrap;
-}
 
 /* =================== Toggle Theme Button =================== */
 .toggle-theme {

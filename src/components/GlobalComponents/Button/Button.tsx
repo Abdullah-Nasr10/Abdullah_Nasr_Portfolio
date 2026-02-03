@@ -3,12 +3,12 @@ interface ButtonProps {
   btnText: string;
   btnIcon?: React.ElementType;
   href?: string;
+  download?: string;
 }
-function Button({ btnText, btnIcon: BtnIcon, href }: ButtonProps) {
+function Button({ btnText, btnIcon: BtnIcon, href, download }: ButtonProps) {
   return (
-    <a href={href} className="customBtn">
+    <a href={href} className="customBtn" download={download}>
       <span className="btnText">{btnText}</span>
-      {/* <i className="btnIcon center fa-regular fa-paper-plane"></i> */}
       {BtnIcon && (
         <div className="btnIcon center">
           <BtnIcon />

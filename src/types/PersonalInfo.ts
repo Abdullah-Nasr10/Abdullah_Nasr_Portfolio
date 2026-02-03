@@ -7,4 +7,5 @@ export interface PersonalInfo {
   title: string;
   availableForFreelance: boolean;
   cvUrl: string;
+  description: string[];
 }

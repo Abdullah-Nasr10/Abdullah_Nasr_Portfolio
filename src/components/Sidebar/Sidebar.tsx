@@ -1,16 +1,10 @@
-import {
-  FaBars,
-  FaChevronRight,
-  FaEnvelope,
-  FaHome,
-  FaProjectDiagram,
-  FaUser,
-} from "react-icons/fa";
+import { FaBars, FaChevronRight } from "react-icons/fa";
 import "./Sidebar.css";
 import { useContext } from "react";
 import ThemeContext from "../../context/ThemeContext";
 import { IoIosSunny } from "react-icons/io";
 import { MdNightsStay } from "react-icons/md";
+import Navbar from "../GlobalComponents/Navbar/Navbar";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -50,57 +44,8 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         </header>
 
         {/* ====================== Navigation Icons =========================== */}
-        <nav
-          aria-label="Main navigation"
-          className="flex-grow-1 d-flex flex-column justify-content-center"
-        >
-          <ul className="nav-icons p-0 m-0 d-flex flex-column gap-3">
-            {/*  --------------Home-------------------  */}
-            <li>
-              <a
-                href="#home"
-                className="navigatePages center gap-3 p-3 mx-1"
-                aria-label="Navigate to Home section"
-              >
-                <FaHome aria-hidden="true" />
-                {isOpen && <span className="pageName">Home</span>}
-              </a>
-            </li>
-            {/* --------------About me------------------- */}
-            <li>
-              <a
-                href="#about"
-                className="navigatePages center gap-3 p-3 mx-1"
-                aria-label="Navigate to About me section"
-              >
-                <FaUser aria-hidden="true" />
-                {isOpen && <span className="pageName">About me</span>}
-              </a>
-            </li>
-            {/* --------------Projects------------------- */}
-            <li>
-              <a
-                href="#projects"
-                className="navigatePages center gap-3 p-3 mx-1"
-                aria-label="Navigate to Projects section"
-              >
-                <FaProjectDiagram aria-hidden="true" />
-                {isOpen && <span className="pageName">Projects</span>}
-              </a>
-            </li>
-            {/* --------------Contact me------------------- */}
-            <li>
-              <a
-                href="#contact"
-                className="navigatePages center gap-3 p-3 mx-1"
-                aria-label="Navigate to Contact me section"
-              >
-                <FaEnvelope aria-hidden="true" />
-                {isOpen && <span className="pageName">Contact me</span>}
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+
         {/* ======================== Toggle Theme ============================ */}
         <button
           className="toggle-theme center rounded-circle my-3 mx-auto"

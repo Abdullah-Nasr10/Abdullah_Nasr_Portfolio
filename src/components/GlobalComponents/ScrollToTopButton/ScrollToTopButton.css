@@ -1,0 +1,16 @@
+.scroll-top-btn {
+    bottom: 2rem;
+    right: 2rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: var(--main-color-1);
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1200;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+    transform: translateY(-0.5rem);
+}

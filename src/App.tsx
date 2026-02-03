@@ -4,7 +4,10 @@ import ThemeContext from "./context/ThemeContext";
 import AppRoutes from "./routes/AppRoutes";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    const saved = localStorage.getItem("theme");
+    return saved ? saved === "dark" : true; // Default to dark
+  });
 
   const toggleTheme = () => {
     setIsDarkMode((prev) => !prev);
@@ -12,6 +15,7 @@ function App() {
 
   useEffect(() => {
     document.body.className = isDarkMode ? "dark" : "";
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
   }, [isDarkMode]);
 
   return (
@@ -22,11 +26,3 @@ function App() {
 }
 
 export default App;
-
-/*
-<div className={isDarkMode ? 'bg-dark text-white min-vh-100' : 'bg-light text-dark min-vh-100'}>
-        <div className="container py-5">
-          <h1 className="text-center mt-5 text-danger">Welcome to React with TypeScript and Bootstrap!</h1>
-        </div>
-      </div>
-*/

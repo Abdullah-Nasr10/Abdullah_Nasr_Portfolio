@@ -1,0 +1,55 @@
+/* ------------------------ About Personal Info CSS -----------------------  */
+.about-info-container .about-img .img-wrapper {
+    width: 85%;
+    min-height: 30rem;
+    box-shadow: -1rem 1rem var(--main-color-1);
+    border-radius: 1rem 1rem 1rem 10rem;
+}
+
+.about-info-container .about-img .img-wrapper img {
+    border-radius: 1rem 1rem 1rem 10rem;
+}
+
+/* About Content */
+.about-content .aboutHeadingName span {
+    color: var(--main-color-1);
+}
+
+.about-content .aboutDescription {
+    color: var(--text-color);
+}
+
+.about-content .personalData {
+    border-color: var(--border-color);
+}
+
+.about-content .personal-information dt {
+    color: var(--title-color);
+}
+
+/* Social Links */
+.about-info-container .social-links {
+    bottom: 50%;
+    right: -2rem;
+    transform: translateY(50%);
+    background-color: var(--body-color);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    border: 0.1rem solid var(--border-color);
+    z-index: 10;
+
+}
+
+.social-link {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: var(--container-color);
+    font-size: 2rem;
+    color: var(--title-color);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--main-color-1);
+    color: var(--white-color);
+}

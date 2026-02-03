@@ -1,7 +1,10 @@
 import { LuMessageCircleMore } from "react-icons/lu";
 import Button from "../../GlobalComponents/Button/Button";
 import "./HomeSection.css";
+import { personalInfo } from "../../../data/personalInfo";
+import type { PersonalInfo } from "../../../types/PersonalInfo";
 function HomeSection() {
+  const personalInfoData: PersonalInfo = personalInfo;
   return (
     <div className="container home">
       <div className="row align-items-center justify-content-between g-4">
@@ -9,10 +12,11 @@ function HomeSection() {
         <article className="col-lg-7 col-md-6 homeContent order-2 order-md-1">
           <header>
             <h1 className="hello mb-4">
-              Hello, my name is <span className="name">Abdullah Nasr</span>
+              Hello, my name is{" "}
+              <span className="name">{personalInfoData.name}</span>
             </h1>
             <h2 className="jobField fs-1 mb-4">
-              I'm a <span className="jobTitle">Full-Stack Developer</span>
+              I'm a <span className="jobTitle">{personalInfoData.title}</span>
             </h2>
           </header>
           <p className="fs-4 mb-4">

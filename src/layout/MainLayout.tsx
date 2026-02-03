@@ -2,6 +2,7 @@ import { useState } from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
 import { Outlet } from "react-router-dom";
 import "./MainLayout.css";
+import ScrollToTopButton from "../components/GlobalComponents/ScrollToTopButton/ScrollToTopButton";
 
 function MainLayout() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,8 @@ function MainLayout() {
       <main className="main-content">
         <Outlet />
       </main>
+      {/* ======================= Scroll To Top ===========================*/}
+      <ScrollToTopButton />
     </div>
   );
 }
