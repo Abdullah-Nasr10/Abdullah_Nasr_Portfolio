@@ -1,0 +1,36 @@
+.skill-box {
+    background-color: var(--container-color);
+    border: 0.1rem solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.skill-box:hover {
+    box-shadow: 0 0 0.3rem #b6b6b6;
+    transform: translateY(-0.8rem);
+    border-color: var(--main-color-2);
+}
+
+.skill-box .skillsIcon {
+    background-color: var(--main-color-1);
+    width: 6rem;
+    height: 6rem;
+    color: var(--white-color);
+    font-size: 2rem;
+}
+
+.skill-box .skillTitle {
+    color: var(--main-color-1);
+}
+
+.skill-box .mySkill span {
+    background-color: var(--body-color);
+    color: var(--title-color);
+    border: 0.1rem solid var(--border-color);
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.skill-box .mySkill span:hover {
+    background-color: var(--main-color-1);
+    color: var(--white-color);
+}

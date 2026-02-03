@@ -35,7 +35,7 @@
 .toggle-btn {
     border: 0.1rem solid var(--border-color);
     color: var(--title-color);
-    cursor: pointer;
+    cursor: ew-resize !important;
     position: absolute;
     right: -1rem;
     top: 1.5rem;

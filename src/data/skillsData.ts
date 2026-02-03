@@ -6,7 +6,6 @@ export const skillsData: SkillCategory[] = [
   {
     id: 1,
     category: "Frontend Development",
-    icon: "fa-solid fa-code",
     skills: [
       "HTML5",
       "CSS3",
@@ -24,7 +23,6 @@ export const skillsData: SkillCategory[] = [
   {
     id: 2,
     category: "Backend Development",
-    icon: "fa-solid fa-server",
     skills: [
       "Node.js",
       "Express.js",
@@ -38,19 +36,16 @@ export const skillsData: SkillCategory[] = [
   {
     id: 3,
     category: "Database",
-    icon: "fa-solid fa-database",
     skills: ["MongoDB"],
   },
   {
     id: 4,
     category: "AI Integration",
-    icon: "fa-solid fa-robot",
     skills: ["OpenAI APIs"],
   },
   {
     id: 5,
     category: "UI/UX Design",
-    icon: "fa-brands fa-figma",
     skills: ["Figma"],
   },
 ];
