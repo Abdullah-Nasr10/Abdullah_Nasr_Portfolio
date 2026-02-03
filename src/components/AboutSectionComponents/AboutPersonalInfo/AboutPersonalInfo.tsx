@@ -89,8 +89,9 @@ function AboutPersonalInfo() {
         <p className="aboutDescription fs-5 mb-0">
           {personalInfoData.description[1]}
         </p>
+        <hr className="aboutSectionDivider my-2" />
 
-        <h3 className="personalData text-capitalize border-top pt-3 mb-0 fs-3">
+        <h3 className="personalData text-capitalize mb-0 fs-3">
           personal information
         </h3>
 

@@ -1,0 +1,8 @@
+.about-section-heading .heading-label span {
+    color: var(--main-color-1);
+    background-color: var(--container-color);
+}
+
+.about-section-heading .heading-title {
+    color: var(--main-color-2);
+}
