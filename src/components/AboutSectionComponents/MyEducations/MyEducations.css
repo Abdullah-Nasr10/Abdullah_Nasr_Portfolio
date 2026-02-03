@@ -1,0 +1,82 @@
+.education-box {
+    background-color: var(--container-color);
+    border: 0.1rem solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.education-box:hover {
+    transform: translateY(-0.8rem);
+}
+
+.education-icon {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--body-color);
+    border: 0.1rem solid;
+    font-size: 1.3rem;
+    position: relative;
+}
+
+.education-icon::before {
+    content: "";
+    position: absolute;
+    width: 0.1rem;
+    height: 5rem;
+    bottom: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* First education - Green */
+.education-box-1 .education-icon {
+    border-color: var(--green-color);
+    color: var(--green-color);
+}
+
+.education-box-1 .education-icon::before {
+    background-color: var(--green-color);
+}
+
+.education-box-1 .education-title span {
+    color: var(--green-color);
+}
+
+/* Second education - Yellow */
+.education-box-2 .education-icon {
+    border-color: var(--yellow-color);
+    color: var(--yellow-color);
+}
+
+.education-box-2 .education-icon::before {
+    background-color: var(--yellow-color);
+}
+
+.education-box-2 .education-title span {
+    color: var(--yellow-color);
+}
+
+/* Third education - Red */
+.education-box-3 .education-icon {
+    border-color: var(--red-color);
+    color: var(--red-color);
+}
+
+.education-box-3 .education-icon::before {
+    background-color: var(--red-color);
+}
+
+.education-box-3 .education-title span {
+    color: var(--red-color);
+}
+
+.education-date {
+    color: var(--text-color);
+}
+
+.education-title {
+    color: var(--title-color);
+}
+
+.education-description {
+    color: var(--text-color);
+}

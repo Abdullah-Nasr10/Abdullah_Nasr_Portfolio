@@ -4,5 +4,4 @@ export interface Education {
   degree: string;
   institution: string;
   description: string;
-  icon: string;
 }
