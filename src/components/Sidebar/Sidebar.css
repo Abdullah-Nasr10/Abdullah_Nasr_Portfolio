@@ -4,7 +4,6 @@
     color: var(--title-color);
     transition: width 0.3s ease;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-    height: 100svh;
 }
 
 .sidebar.open {

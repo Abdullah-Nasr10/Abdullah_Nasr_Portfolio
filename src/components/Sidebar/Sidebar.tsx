@@ -16,7 +16,7 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   return (
     <>
       <aside
-        className={`sidebar position-fixed start-0 top-0 d-flex flex-column ${isOpen ? "open" : ""}`}
+        className={`sidebar position-fixed start-0 top-0 vh-100 d-flex flex-column ${isOpen ? "open" : ""}`}
         style={{ zIndex: 1000 }}
       >
         {/* ====================== Toggle Button ============================= */}
