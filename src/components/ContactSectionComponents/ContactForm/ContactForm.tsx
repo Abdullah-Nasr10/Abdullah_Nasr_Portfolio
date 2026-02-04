@@ -105,7 +105,7 @@ function ContactForm() {
                   {...register("FirstName", {
                     required: "First name is required",
                     pattern: {
-                      value: /^[A-Za-z]{2,}$/,
+                      value: /^[A-Za-z\u0600-\u06FF\s]{2,}$/,
                       message: "Only letters, minimum 2 characters",
                     },
                   })}
@@ -130,7 +130,7 @@ function ContactForm() {
                   {...register("LastName", {
                     required: "Last name is required",
                     pattern: {
-                      value: /^[A-Za-z]{2,}$/,
+                      value: /^[A-Za-z\u0600-\u06FF\s]{2,}$/,
                       message: "Only letters, minimum 2 characters",
                     },
                   })}
