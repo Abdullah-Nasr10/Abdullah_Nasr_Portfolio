@@ -7,34 +7,33 @@ interface NavbarProps {
 }
 function Navbar({ isOpen, setIsOpen }: NavbarProps) {
   const [activeSection, setActiveSection] = useState<string>("home");
+
   useEffect(() => {
-    const handleScroll = () => {
-      let current = "";
-      const sections = document.querySelectorAll("section[id]");
+    const sections = document.querySelectorAll("section[id]");
 
-      sections.forEach((section) => {
-        const sectionElement = section as HTMLElement;
-        const sectionTop = sectionElement.offsetTop - 150;
-        const sectionHeight = sectionElement.clientHeight;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: "-45% 0px -55% 0px",
+        threshold: 0,
+      },
+    );
 
-        if (
-          window.scrollY >= sectionTop &&
-          window.scrollY < sectionTop + sectionHeight
-        ) {
-          current = sectionElement.getAttribute("id") || "";
-        }
-      });
+    sections.forEach((section) => observer.observe(section));
 
-      if (current) {
-        setActiveSection(current);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Call on mount to set initial active section
-
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => observer.disconnect();
   }, []);
+
+  const handleClick = (id: string) => {
+    setActiveSection(id);
+    setIsOpen?.(false);
+  };
 
   return (
     <nav
@@ -47,7 +46,7 @@ function Navbar({ isOpen, setIsOpen }: NavbarProps) {
           <a
             href="#home"
             className={`navigatePages center gap-3 p-3 mx-1 ${activeSection === "home" ? "active" : ""}`}
-            onClick={() => setIsOpen && setIsOpen(false)}
+            onClick={() => handleClick("home")}
             aria-label="Navigate to Home section"
           >
             <FaHome aria-hidden="true" />
@@ -58,7 +57,7 @@ function Navbar({ isOpen, setIsOpen }: NavbarProps) {
         <li>
           <a
             href="#about"
-            onClick={() => setIsOpen && setIsOpen(false)}
+            onClick={() => handleClick("about")}
             className={`navigatePages center gap-3 p-3 mx-1 ${activeSection === "about" ? "active" : ""}`}
             aria-label="Navigate to About me section"
           >
@@ -70,7 +69,7 @@ function Navbar({ isOpen, setIsOpen }: NavbarProps) {
         <li>
           <a
             href="#projects"
-            onClick={() => setIsOpen && setIsOpen(false)}
+            onClick={() => handleClick("projects")}
             className={`navigatePages center gap-3 p-3 mx-1 ${activeSection === "projects" ? "active" : ""}`}
             aria-label="Navigate to Projects section"
           >
@@ -82,7 +81,7 @@ function Navbar({ isOpen, setIsOpen }: NavbarProps) {
         <li>
           <a
             href="#contact"
-            onClick={() => setIsOpen && setIsOpen(false)}
+            onClick={() => handleClick("contact")}
             className={`navigatePages center gap-3 p-3 mx-1 ${activeSection === "contact" ? "active" : ""}`}
             aria-label="Navigate to Contact me section"
           >
