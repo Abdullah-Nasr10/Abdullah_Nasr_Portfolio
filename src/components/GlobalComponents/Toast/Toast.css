@@ -1,0 +1,41 @@
+.toast-notification {
+    top: 2rem;
+    right: 2rem;
+    z-index: 9999;
+    min-width: 30rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease-out;
+    background-color: var(--container-color);
+}
+
+.toast-success .toast-icon {
+    color: var(--green-color);
+}
+
+.toast-error .toast-icon {
+    color: var(--red-color);
+}
+
+.toast-message {
+    color: var(--title-color);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .toast-notification {
+        left: 1rem;
+        right: 1rem;
+        min-width: auto;
+    }
+}
