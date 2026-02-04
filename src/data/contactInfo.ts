@@ -8,7 +8,6 @@ export const contactInfo: ContactInfo[] = [
     type: "address",
     title: "Address",
     value: "Qena - Egypt",
-    icon: "fa-solid fa-location-dot",
     link: null,
   },
   {
@@ -16,7 +15,6 @@ export const contactInfo: ContactInfo[] = [
     type: "email",
     title: "Email",
     value: "abdullah.nasr1022@gmail.com",
-    icon: "fa-regular fa-envelope",
     link: "mailto:abdullah.nasr1022@gmail.com",
   },
   {
@@ -24,7 +22,6 @@ export const contactInfo: ContactInfo[] = [
     type: "phone",
     title: "Phone",
     value: "+20 103 320 7428",
-    icon: "fa-solid fa-phone",
     link: "tel:+201033207428",
   },
   {
@@ -32,7 +29,6 @@ export const contactInfo: ContactInfo[] = [
     type: "freelance",
     title: "freelance",
     value: "Available Right Now",
-    icon: "fa-regular fa-user",
-    link: null,
+    link: "https://mostaql.com/u/Abdullah22_Nasr",
   },
 ];

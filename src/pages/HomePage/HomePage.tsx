@@ -19,7 +19,7 @@ function HomePage() {
         <ProjectsSection />
       </section>
 
-      <section id="contact" className="px-3 min-vh-100">
+      <section id="contact" className="px-3">
         <ContactSection />
       </section>
       <footer id="footer" className="px-3">

@@ -3,6 +3,5 @@ export interface ContactInfo {
   type: string;
   title: string;
   value: string;
-  icon: string;
   link: string | null;
 }

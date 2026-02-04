@@ -1,0 +1,42 @@
+.input-group-custom {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label-custom {
+    color: var(--title-color);
+    font-size: var(--large-font-size);
+    margin: 0 0 1rem 1.5rem;
+}
+
+.form-control-custom {
+    background-color: var(--container-color);
+    width: 100%;
+    padding: 1.5rem;
+    font-size: var(--large-font-size);
+    color: var(--text-color);
+    border: 0.1rem solid var(--border-color);
+    transition: border-color 0.3s ease;
+}
+
+.form-control-custom:focus {
+    outline: none;
+    border-color: var(--main-color-1);
+}
+
+.form-control-custom::placeholder {
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+textarea.form-control-custom {
+    resize: none;
+}
+
+.error-message {
+    color: var(--red-color);
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+    display: block;
+}
