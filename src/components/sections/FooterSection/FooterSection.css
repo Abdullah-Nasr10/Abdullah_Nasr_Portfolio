@@ -13,22 +13,22 @@
 
 .footer-content {
     border-color: var(--border-color) !important;
-}
 
-.social-link {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    background-color: var(--container-color);
-    border: 0.1rem solid var(--border-color);
-    color: var(--text-color);
-    font-size: 1.6rem;
-    transition: all 0.3s ease;
-}
+    .social-link {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        background-color: var(--container-color);
+        border: 0.1rem solid var(--border-color);
+        color: var(--text-color);
+        font-size: 1.6rem;
+        transition: all 0.3s ease;
+    }
 
-.social-link:hover {
-    background-color: var(--main-color-1);
-    border-color: var(--main-color-1);
-    color: var(--container-color);
-    transform: translateY(-0.3rem);
+    .social-link:hover {
+        background-color: var(--main-color-1);
+        border-color: var(--main-color-1);
+        color: var(--container-color);
+        transform: translateY(-0.3rem);
+    }
 }
