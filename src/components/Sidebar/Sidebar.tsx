@@ -56,9 +56,9 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
           type="button"
         >
           {isDarkMode ? (
-            <IoIosSunny aria-hidden="true" />
+            <IoIosSunny aria-hidden="true" key="sun" />
           ) : (
-            <MdNightsStay aria-hidden="true" />
+            <MdNightsStay aria-hidden="true" key="moon" />
           )}
         </button>
       </aside>
