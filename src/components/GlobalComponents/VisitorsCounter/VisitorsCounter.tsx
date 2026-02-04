@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import "./VisitorsCounter.css";
 
@@ -7,15 +7,15 @@ import "./VisitorsCounter.css";
 // =====================================================================================
 function VisitorsCounter() {
   // =================== State Management ===================
-  const [count, setCount] = useState<number | null>(null);
+  //   const [count, setCount] = useState<number | null>(null);
 
   // =================== Fetch Visitors Count ===================
-  useEffect(() => {
-    fetch("https://api.countapi.xyz/hit/abdullah-portfolio/visitors")
-      .then((res) => res.json())
-      .then((data) => setCount(data.value))
-      .catch(() => setCount(null));
-  }, []);
+  //   useEffect(() => {
+  //     fetch("https://api.countapi.xyz/hit/abdullah-portfolio/visitors")
+  //       .then((res) => res.json())
+  //       .then((data) => setCount(data.value))
+  //       .catch(() => setCount(null));
+  //   }, []);
 
   // =================== Format Number (K/M) ===================
   const formatCount = (num: number) => {
@@ -30,7 +30,8 @@ function VisitorsCounter() {
       <FaEye className="visitors-icon" />
       <span className="visitors-label">Total Views:</span>
       <strong className="visitors-count">
-        {count !== null ? formatCount(count) : "—"}
+        {/* {count !== null ? formatCount(count) : "—"} */}
+        {formatCount(12345)}
       </strong>
     </div>
   );
