@@ -1,4 +1,6 @@
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { doc, getDoc, updateDoc, increment } from "firebase/firestore";
+import { db } from "../../../config/firebase";
 import { FaEye } from "react-icons/fa";
 import "./VisitorsCounter.css";
 
@@ -7,15 +9,35 @@ import "./VisitorsCounter.css";
 // =====================================================================================
 function VisitorsCounter() {
   // =================== State Management ===================
-  //   const [count, setCount] = useState<number | null>(null);
+  const [count, setCount] = useState<number | null>(null);
 
-  // =================== Fetch Visitors Count ===================
-  //   useEffect(() => {
-  //     fetch("https://api.countapi.xyz/hit/abdullah-portfolio/visitors")
-  //       .then((res) => res.json())
-  //       .then((data) => setCount(data.value))
-  //       .catch(() => setCount(null));
-  //   }, []);
+  // =================== Fetch & Update Visitors Count ===================
+  useEffect(() => {
+    const handleVisit = async () => {
+      try {
+        const ref = doc(db, "state", "visitors");
+
+        // Prevent increment on every refresh (only once per session)
+        if (!sessionStorage.getItem("visited")) {
+          await updateDoc(ref, {
+            visits: increment(1),
+          });
+          sessionStorage.setItem("visited", "true");
+        }
+
+        // Get current count
+        const snap = await getDoc(ref);
+        if (snap.exists()) {
+          setCount(snap.data().visits);
+        }
+      } catch (error) {
+        console.error("Firebase error:", error);
+        setCount(null);
+      }
+    };
+
+    handleVisit();
+  }, []);
 
   // =================== Format Number (K/M) ===================
   const formatCount = (num: number) => {
@@ -30,8 +52,7 @@ function VisitorsCounter() {
       <FaEye className="visitors-icon" />
       <span className="visitors-label">Total Views:</span>
       <strong className="visitors-count">
-        {/* {count !== null ? formatCount(count) : "—"} */}
-        {formatCount(12345)}
+        {count !== null ? formatCount(count) : "—"}
       </strong>
     </div>
   );
