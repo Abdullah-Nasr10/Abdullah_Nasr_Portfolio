@@ -1,0 +1,19 @@
+.visitors {
+    background-color: var(--container-color);
+    border-color: var(--border-color) !important;
+    font-size: 1.4rem;
+}
+
+.visitors-icon {
+    color: var(--main-color-1);
+    font-size: 1.6rem;
+}
+
+.visitors-label {
+    color: var(--text-color);
+}
+
+.visitors-count {
+    color: var(--title-color);
+    font-size: 1.5rem;
+}
