@@ -139,12 +139,12 @@ img {
 
 @media(max-width:991px) {
   html {
-    font-size: 55%;
+    font-size: 57%;
   }
 }
 
 @media(max-width:450px) {
   html {
-    font-size: 50%;
+    font-size: 55%;
   }
 }
