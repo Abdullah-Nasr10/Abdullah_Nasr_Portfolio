@@ -8,24 +8,32 @@ interface NavbarProps {
 function Navbar({ isOpen, setIsOpen }: NavbarProps) {
   const [activeSection, setActiveSection] = useState<string>("home");
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
+    const handleScroll = () => {
+      let current = "";
+      const sections = document.querySelectorAll("section[id]");
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.6,
-      },
-    );
+      sections.forEach((section) => {
+        const sectionElement = section as HTMLElement;
+        const sectionTop = sectionElement.offsetTop - 150;
+        const sectionHeight = sectionElement.clientHeight;
 
-    sections.forEach((section) => observer.observe(section));
+        if (
+          window.scrollY >= sectionTop &&
+          window.scrollY < sectionTop + sectionHeight
+        ) {
+          current = sectionElement.getAttribute("id") || "";
+        }
+      });
 
-    return () => observer.disconnect();
+      if (current) {
+        setActiveSection(current);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call on mount to set initial active section
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (

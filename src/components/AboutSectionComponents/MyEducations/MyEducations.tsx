@@ -5,7 +5,7 @@ import "./MyEducations.css";
 
 function MyEducations() {
   return (
-    <section>
+    <div>
       <AboutSectionHeading
         subTitle="MY EDUCATIONS"
         title="Education Background"
@@ -15,7 +15,7 @@ function MyEducations() {
           <div key={education.id} className="col-lg-4 col-md-6">
             <article
               className={`education-box education-box-${index + 1} p-4 rounded-3 d-flex gap-3 h-100`}
-              data-aos="fade-up"
+              aria-label={`Education at ${education.institution} for ${education.degree}`}
             >
               <div className="education-icon-wrapper">
                 <div className="education-icon rounded-circle center">
@@ -35,7 +35,7 @@ function MyEducations() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
 

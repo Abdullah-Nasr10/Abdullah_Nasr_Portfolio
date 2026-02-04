@@ -73,7 +73,7 @@ function AboutPersonalInfo() {
       </figure>
 
       {/* ======================== About Content ======================== */}
-      <section
+      <div
         className="col-lg-8 col-md-7 about-content d-flex flex-column gap-4 order-2"
         aria-label="About Abdullah Nasr personal information"
       >
@@ -128,7 +128,7 @@ function AboutPersonalInfo() {
             download="Abdullah-Nasr-CV.pdf"
           />
         </footer>
-      </section>
+      </div>
     </article>
   );
 }

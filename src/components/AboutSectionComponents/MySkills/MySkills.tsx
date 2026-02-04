@@ -14,7 +14,7 @@ const categoryIcons: Record<string, React.ElementType> = {
 
 function MySkills() {
   return (
-    <section className="skills">
+    <div className="skills">
       <AboutSectionHeading subTitle="MY SKILLS" title="Technical Skills" />
 
       <div className="skillsContainer row g-4 mt-5">
@@ -48,7 +48,7 @@ function MySkills() {
           );
         })}
       </div>
-    </section>
+    </div>
   );
 }
 
