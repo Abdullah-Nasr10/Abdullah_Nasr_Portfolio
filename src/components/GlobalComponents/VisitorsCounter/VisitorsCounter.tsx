@@ -17,12 +17,18 @@ function VisitorsCounter() {
       try {
         const ref = doc(db, "state", "visitors");
 
-        // Prevent increment on every refresh (only once per session)
-        if (!sessionStorage.getItem("visited")) {
+        // Check if user has visited before using localStorage (persists across sessions)
+        const hasVisited = localStorage.getItem("hasVisited");
+
+        if (!hasVisited) {
+          // First time visitor - increment count
           await updateDoc(ref, {
             visits: increment(1),
           });
-          sessionStorage.setItem("visited", "true");
+
+          // Mark as visited permanently
+          localStorage.setItem("hasVisited", "true");
+          localStorage.setItem("firstVisit", new Date().toISOString());
         }
 
         // Get current count
