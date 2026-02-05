@@ -1,15 +1,15 @@
 ﻿import type { Project } from "../types/Project";
 
 // Import images from assets/projectsImages
-import MobileMasrWebsite from "../assets/projectsImages/MobileMasrWebsite.png";
-import MobileMasrDashboard from "../assets/projectsImages/MobileMasrDashboard.png";
-import ShopCo from "../assets/projectsImages/ShopCo.png";
-import Movies from "../assets/projectsImages/Movies.png";
-import FishGame from "../assets/projectsImages/FishGame.png";
-import UIUX from "../assets/projectsImages/UIUX.png";
-import Portfolio from "../assets/projectsImages/OldPortfolio.png";
-import Healix from "../assets/projectsImages/HealixWebsite.png";
-import TazaMarket from "../assets/projectsImages/TazaMarketWebsite.png";
+import MobileMasrWebsite from "../assets/projectsImages/MobileMasrWebsite.webp";
+import MobileMasrDashboard from "../assets/projectsImages/MobileMasrDashboard.webp";
+import ShopCo from "../assets/projectsImages/ShopCo.webp";
+import Movies from "../assets/projectsImages/Movies.webp";
+import FishGame from "../assets/projectsImages/FishGame.webp";
+import UIUX from "../assets/projectsImages/UIUX.webp";
+import Portfolio from "../assets/projectsImages/OldPortfolio.webp";
+import Healix from "../assets/projectsImages/HealixWebsite.webp";
+import TazaMarket from "../assets/projectsImages/TazaMarketWebsite.webp";
 
 export const projectsData: Project[] = [
   {
