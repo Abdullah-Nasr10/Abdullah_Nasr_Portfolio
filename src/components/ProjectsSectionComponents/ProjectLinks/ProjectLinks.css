@@ -1,0 +1,36 @@
+.project-link {
+    font-size: 1.4rem;
+    font-weight: var(--weight-600);
+    color: var(--white);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.project-link:hover {
+    transform: translateY(-0.2rem);
+    opacity: 0.9;
+}
+
+.github-link {
+
+    border: 1px solid var(--white);
+    background-color: var(--black);
+    /* color: var(--white); */
+
+}
+
+.live-link {
+    background-color: var(--main-color-1);
+}
+
+.figma-link {
+    background-color: var(--orange-color);
+}
+
+.video-link {
+    background-color: var(--red-color);
+}
+
+.project-link svg {
+    font-size: 1.6rem;
+}

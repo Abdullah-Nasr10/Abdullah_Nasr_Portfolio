@@ -3,9 +3,10 @@ export interface Project {
   name: string;
   description: string;
   image: string;
-  liveUrl: string;
+  liveUrl?: string;
   githubUrl?: string;
   figmaUrl?: string;
+  videoUrl?: string;
   technologies: string[];
   category: string;
 }

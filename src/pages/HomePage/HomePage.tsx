@@ -15,7 +15,7 @@ function HomePage() {
         <AboutSection />
       </section>
 
-      <section id="projects" className="px-3 min-vh-100">
+      <section id="projects" className="px-3">
         <ProjectsSection />
       </section>
 

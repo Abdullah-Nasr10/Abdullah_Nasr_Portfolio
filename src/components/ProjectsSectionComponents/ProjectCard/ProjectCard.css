@@ -1,0 +1,77 @@
+/* =================== Project Card =================== */
+.project-card {
+    background-color: var(--body-color);
+    border-color: var(--border-color) !important;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-1rem) !important;
+}
+
+/* =================== Image & Overlay =================== */
+.project-image {
+    aspect-ratio: 16 / 9;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-image img {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.2);
+}
+
+.image-overlay {
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .image-overlay {
+    transform: scaleY(1);
+}
+
+/* =================== Technologies with Colors =================== */
+.tech-badge {
+    background-color: var(--container-color);
+    color: var(--title-color);
+    font-size: 1.2rem;
+}
+
+.tech-badge.yellow {
+    background-color: var(--yellow-color);
+    color: var(--title-color);
+}
+
+.tech-badge.red {
+    background-color: var(--red-color);
+    color: white;
+}
+
+.tech-badge.green {
+    background-color: var(--green-color);
+    color: white;
+}
+
+.tech-badge.blue {
+    background-color: var(--blue-color);
+    color: white;
+}
+
+.tech-badge.purple {
+    background-color: var(--purple-color);
+    color: white;
+}
+
+.tech-badge.orange {
+    background-color: var(--orange-color);
+    color: white;
+}
+
+.tech-badge.cyan {
+    background-color: var(--cyan-color);
+    color: var(--title-color);
+}
