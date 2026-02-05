@@ -8,7 +8,6 @@ export const getTechColor = (tech: string): string => {
   // Frameworks & Libraries - Special Colors
   if (
     techLower.includes("node") ||
-    techLower.includes("express") ||
     techLower.includes("mongodb") ||
     techLower.includes("mysql")
   )
@@ -32,11 +31,17 @@ export const getTechColor = (tech: string): string => {
   if (
     techLower.includes("bootstrap") ||
     techLower.includes("tailwind") ||
+    techLower.includes("sass") ||
     techLower.includes("scss")
   )
     return "purple";
   // ---------------------------------------------------
-  if (techLower.includes("firebase") || techLower.includes("supabase"))
+  if (
+    techLower.includes("firebase") ||
+    techLower.includes("supabase") ||
+    techLower.includes("express") ||
+    techLower.includes("rag")
+  )
     return "yellow";
   // ---------------------------------------------------
   if (techLower.includes("redux") || techLower.includes("context"))

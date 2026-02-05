@@ -41,7 +41,7 @@ export const skillsData: SkillCategory[] = [
   {
     id: 4,
     category: "AI Integration",
-    skills: ["OpenAI APIs"],
+    skills: ["OpenAI APIs", "RAG"],
   },
   {
     id: 5,

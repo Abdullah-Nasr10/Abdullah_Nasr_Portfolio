@@ -11,7 +11,7 @@ function ProjectsGrid({ projects }: ProjectsGridProps) {
     <div className="projects-grid row g-4">
       {projects.length > 0 ? (
         projects.map((project) => (
-          <div key={project.id} className="col-12 col-md-6 col-lg-3">
+          <div key={project.id} className="col-12 col-md-6 col-lg-4">
             <ProjectCard project={project} />
           </div>
         ))
