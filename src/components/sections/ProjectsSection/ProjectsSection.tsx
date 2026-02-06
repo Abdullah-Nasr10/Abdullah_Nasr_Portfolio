@@ -11,8 +11,10 @@ function ProjectsSection() {
   // =================== Filter Projects ===================
   const filteredProjects =
     activeCategory === "All"
-      ? projectsData
-      : projectsData.filter((project) => project.category === activeCategory);
+      ? [...projectsData].reverse()
+      : projectsData
+          .filter((project) => project.category === activeCategory)
+          .reverse();
 
   return (
     <div className="container">
