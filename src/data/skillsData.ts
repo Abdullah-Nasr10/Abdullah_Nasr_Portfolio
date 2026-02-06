@@ -31,12 +31,14 @@ export const skillsData: SkillCategory[] = [
       "RESTful APIs",
       "GraphQL",
       "JWT Authentication",
+      "Socket.io",
+      "Firebase",
     ],
   },
   {
     id: 3,
     category: "Database",
-    skills: ["MongoDB"],
+    skills: ["MongoDB", "Firebase"],
   },
   {
     id: 4,
@@ -46,6 +48,6 @@ export const skillsData: SkillCategory[] = [
   {
     id: 5,
     category: "UI/UX Design",
-    skills: ["Figma"],
+    skills: ["Figma", "Google Stitch with AI", "Canva"],
   },
 ];

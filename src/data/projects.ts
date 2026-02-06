@@ -92,25 +92,6 @@ export const projectsData: Project[] = [
   },
   {
     id: 8,
-    name: "Mobile Masr",
-    description:
-      "A full-featured e-commerce platform for mobile devices with smart search, product comparison, and bilingual support.",
-    image: MobileMasrWebsite,
-    liveUrl: "https://mobile-masr.vercel.app/",
-    githubUrl: "https://github.com/Abdullah-Nasr10/Mobile-Masr",
-    technologies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "Node.js",
-      "MongoDB",
-      "Express",
-    ],
-    category: "Full-Stack",
-  },
-  {
-    id: 9,
     name: "Mobile Masr Dashboard",
     description:
       "An admin dashboard with AI assistant integration for efficient e-commerce management and data analytics.",
@@ -127,6 +108,25 @@ export const projectsData: Project[] = [
       "Node.js",
       "MongoDB",
       "RAG",
+    ],
+    category: "Full-Stack",
+  },
+  {
+    id: 9,
+    name: "Mobile Masr",
+    description:
+      "A full-featured e-commerce platform for mobile devices with smart search, product comparison, and bilingual support.",
+    image: MobileMasrWebsite,
+    liveUrl: "https://mobile-masr.vercel.app/",
+    githubUrl: "https://github.com/Abdullah-Nasr10/Mobile-Masr",
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
     ],
     category: "Full-Stack",
   },
