@@ -39,7 +39,7 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
             <img src="/MyPhoto.png" alt="Abdullah Nasr - Portfolio" />
           </div>
           {isOpen && (
-            <h1 className="nameTitle fs-2 m-0 text-center">Abdullah Nasr</h1>
+            <h2 className="nameTitle fs-2 m-0 text-center">Abdullah Nasr</h2>
           )}
         </header>
 
