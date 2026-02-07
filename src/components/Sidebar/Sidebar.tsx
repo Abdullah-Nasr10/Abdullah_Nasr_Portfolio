@@ -5,8 +5,7 @@ import ThemeContext from "../../context/ThemeContext";
 import { IoIosSunny } from "react-icons/io";
 import { MdNightsStay } from "react-icons/md";
 import Navbar from "../GlobalComponents/Navbar/Navbar";
-// import myPhoto from "../../assets/MyPhoto.webp";
-import myimage from "../../assets/MyImage.webp";
+import heroimage from "../../assets/HeroImage.webp";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -39,7 +38,7 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         <header className="imgTitle d-flex flex-column align-items-center gap-2 px-2 pb-3">
           <div className="profileImg rounded-circle overflow-hidden">
             <img
-              src={myimage}
+              src={heroimage}
               alt="Abdullah Nasr - Portfolio"
               decoding="async"
               loading="eager"
