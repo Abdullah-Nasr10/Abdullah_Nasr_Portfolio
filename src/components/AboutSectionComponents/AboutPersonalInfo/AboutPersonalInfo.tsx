@@ -26,6 +26,8 @@ function AboutPersonalInfo() {
             src={aboutImg}
             alt="Abdullah Nasr"
             className="w-100 h-100 object-fit-cover"
+            loading="lazy"
+            decoding="async"
           />
           {/* -------------------------- Social Links ----------------------- */}
           <div

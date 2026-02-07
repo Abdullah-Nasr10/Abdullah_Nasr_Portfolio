@@ -16,6 +16,8 @@ function ProjectCard({ project }: ProjectCardProps) {
           src={project.image}
           alt={project.name}
           className="w-100 h-100 object-fit-cover"
+          loading="lazy"
+          decoding="async"
         />
         <div className="image-overlay position-absolute top-0 start-0 w-100 h-100"></div>
       </figure>

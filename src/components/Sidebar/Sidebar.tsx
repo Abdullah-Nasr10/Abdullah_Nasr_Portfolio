@@ -36,7 +36,11 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         {/* ====================== Profile Image and Name ===================== */}
         <header className="imgTitle d-flex flex-column align-items-center gap-2 px-2 pb-3">
           <div className="profileImg rounded-circle overflow-hidden">
-            <img src="/MyPhoto.png" alt="Abdullah Nasr - Portfolio" />
+            <img
+              src="/MyPhoto.png"
+              alt="Abdullah Nasr - Portfolio"
+              decoding="async"
+            />
           </div>
           {isOpen && (
             <h2 className="nameTitle fs-2 m-0 text-center">Abdullah Nasr</h2>

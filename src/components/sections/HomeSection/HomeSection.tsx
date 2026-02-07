@@ -37,6 +37,7 @@ function HomeSection() {
             src="./MyPhoto.png"
             alt="Abdullah Nasr - Full-Stack Developer"
             className="h-100"
+            decoding="async"
           />
         </figure>
       </div>
