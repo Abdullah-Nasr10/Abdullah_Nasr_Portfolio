@@ -3,6 +3,7 @@ import Button from "../../GlobalComponents/Button/Button";
 import "./HomeSection.css";
 import { personalInfo } from "../../../data/personalInfo";
 import type { PersonalInfo } from "../../../types/PersonalInfo";
+import myPhoto from "../../../assets/MyPhoto.webp";
 function HomeSection() {
   const personalInfoData: PersonalInfo = personalInfo;
   return (
@@ -34,7 +35,7 @@ function HomeSection() {
         {/* --------------homeImg------------------- */}
         <figure className="col-lg-4 col-md-5 homeImg center rounded-circle overflow-hidden mx-auto order-1 order-md-2">
           <img
-            src="./MyPhoto.png"
+            src={myPhoto}
             alt="Abdullah Nasr - Full-Stack Developer"
             className="h-100"
             decoding="async"

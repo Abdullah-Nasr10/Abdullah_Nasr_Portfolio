@@ -8,7 +8,7 @@ import Movies from "../assets/projectsImages/Movies.webp";
 import FishGame from "../assets/projectsImages/FishGame.webp";
 import UIUX from "../assets/projectsImages/UIUX.webp";
 import OldPortfolio from "../assets/projectsImages/OldPortfolio.webp";
-import NewPortfolio from "../assets/projectsImages/NewPortfolio.png";
+import NewPortfolio from "../assets/projectsImages/NewPortfolio.webp";
 import Healix from "../assets/projectsImages/HealixWebsite.webp";
 import TazaMarket from "../assets/projectsImages/TazaMarketWebsite.webp";
 
