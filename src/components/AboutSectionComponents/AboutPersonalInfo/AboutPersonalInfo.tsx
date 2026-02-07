@@ -8,7 +8,6 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import Button from "../../GlobalComponents/Button/Button";
-import aboutImg from "../../../assets/AboutImg.webp";
 import cvFile from "../../../assets/Abdullah Nasr_CV.pdf";
 import "./AboutPersonalInfo.css";
 
@@ -23,7 +22,7 @@ function AboutPersonalInfo() {
       >
         <div className="img-wrapper position-relative mx-auto">
           <img
-            src={aboutImg}
+            src="/AboutImg.webp"
             alt="Abdullah Nasr"
             className="w-100 h-100 object-fit-cover"
             loading="lazy"
