@@ -40,6 +40,8 @@ function HomeSection() {
             alt="Abdullah Nasr - Full-Stack Developer"
             className="h-100"
             decoding="async"
+            loading="eager"
+            fetchPriority="high"
           />
         </figure>
       </div>
